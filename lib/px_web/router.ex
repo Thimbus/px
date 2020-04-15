@@ -24,5 +24,6 @@ defmodule PxWeb.Router do
     pipe_through :api
 
     get "/", ApiController, :index
+    get "/:id", ApiController, :show
   end
 end

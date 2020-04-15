@@ -11,7 +11,18 @@ import css from "../css/app.css"
 //
 import "phoenix_html"
 
-// Import local files
-//
-// Local files can be imported directly using relative paths, for example:
-// import socket from "./socket"
+window.id = Math.floor(Math.random() * 1000);
+
+import socket from "./socket"
+
+/*
+const name = "quantomistro";
+const endpoint = "/api/";
+fetch(endpoint + name)
+    .then(res => {
+        return res.json();
+    })
+    .then(body => {
+        alert("Response body:\n" + body);
+    });
+*/
