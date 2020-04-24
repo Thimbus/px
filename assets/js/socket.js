@@ -68,14 +68,13 @@ chatInput.addEventListener("keypress", e => {
 });
 
 channel.on("new_msg", payload => {
-  console.log(payload);
   let messageItem = document.createElement("li");
   messageItem.innerText = `[User#${payload.id}] ${payload.message}`;
   messageContainer.appendChild(messageItem);
 });
 
 channel.join()
-  .receive("ok", resp => { console.log("Joined successfully", resp); })
-  .receive("error", resp => { console.log("Unable to join", resp); });
+  .receive("ok", () => { console.log("Joined successfully"); })
+  .receive("error", () => { console.log("Unable to join"); });
 
 export default socket

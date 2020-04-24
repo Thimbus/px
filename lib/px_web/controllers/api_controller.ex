@@ -1,6 +1,6 @@
 defmodule PxWeb.ApiController do
   use PxWeb, :controller
-  
+
   # check request headers to see if they're different when
   # using fetch() vs when opening /api directly in the browser.
   # Don't think you're supposed to send any response if
