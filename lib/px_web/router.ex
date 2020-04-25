@@ -17,13 +17,11 @@ defmodule PxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/app", ChatController, :index
   end
 
   # Other scopes may use custom stacks.
-  scope "/api", PxWeb do
-    pipe_through :api
-
-    get "/", ApiController, :index
-    get "/:id", ApiController, :show
-  end
+  # scope "/api", PxWeb do
+  #   pipe_through :api
+  # end
 end

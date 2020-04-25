@@ -1,0 +1,4 @@
+<ul id="messages"></ul>
+<input id="chat-input" type="text"></input>
+
+<script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>

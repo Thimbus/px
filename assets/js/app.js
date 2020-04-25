@@ -9,20 +9,6 @@ import css from "../css/app.css"
 //
 // Import dependencies
 //
-import "phoenix_html"
+window.id = Math.floor(Math.random() * 9999);
 
-window.id = Math.floor(Math.random() * 1000);
-
-import socket from "./socket"
-
-/*
-const name = "quantomistro";
-const endpoint = "/api/";
-fetch(endpoint + name)
-    .then(res => {
-        return res.json();
-    })
-    .then(body => {
-        alert("Response body:\n" + body);
-    });
-*/
+import socket from "./socket";
