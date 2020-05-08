@@ -13,11 +13,20 @@ defmodule PxWeb.Router do
     plug :accepts, ["json"]
   end
 
+  # handle basic pages
   scope "/", PxWeb do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/app", ChatController, :index
+    get "/signup", PageController, :new
+    get "/login", PageController, :login # ummm not sure what fn name is supposed to match this path :/
+  end
+
+  # handle /app/ paths
+  scope "/app", PxWeb do
+    pipe_through :browser
+
+    get "/", AppController, :index
   end
 
   # Other scopes may use custom stacks.
