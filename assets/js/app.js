@@ -9,6 +9,6 @@ import css from "../css/app.css"
 //
 // Import dependencies
 //
-window.id = ("000" + (Math.floor(Math.random() * 9999)).toString()).substr(-4);
 
+window.username = prompt("Username:");
 import socket from "./socket";

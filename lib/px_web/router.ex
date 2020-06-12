@@ -18,8 +18,10 @@ defmodule PxWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/signup", PageController, :new
-    get "/login", PageController, :login # ummm not sure what fn name is supposed to match this path :/
+    get "/signup", PageController, :get_signup
+    post "/signup", PageController, :post_signup
+    get "/login", PageController, :get_login
+    post "/login", PageController, :post_login
   end
 
   # handle /app/ paths

@@ -119,14 +119,15 @@
 
 <div class="container">
 	<div id="toggle-theme">🌓</div>
-	<form class="border-primary">
+	<form class="border-primary" method="POST" action="/login">
 		<div id="formheading">
 			<h2>👋 Sign in to Dynne</h2>
 		</div>
 		<div id="formdata">
 			<input placeholder="Username">
 			<input type="password" placeholder="Password">
-			<button class="border-primary">Sign in</button>
+            <input type="hidden" name="_csrf_token" value="<%= @csrf %>">
+			<button type="submit" class="border-primary">Sign in</button>
 		</div>
 		<h5>Don't have an account? <a href="/signup">Sign up!</a></h5>
 	</form>

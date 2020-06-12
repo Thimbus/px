@@ -2,3 +2,25 @@
 
 /* @import "./phoenix.css"; */
 
+body {
+    margin: 0;
+}
+
+#chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100vh;
+}
+
+#messages {
+    list-style: none;
+}
+
+#chat-input {
+    padding: 2px;
+    margin-bottom: 5vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}

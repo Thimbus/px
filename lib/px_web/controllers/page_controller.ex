@@ -5,11 +5,27 @@ defmodule PxWeb.PageController do
     render(conn, "landing.html", layout: {PxWeb.LayoutView, "index.html"})
   end
 
-  def new(conn, _params) do
-    render(conn, "signup.html", layout: {PxWeb.LayoutView, "index.html"})
+  def get_signup(conn, _params) do
+    render(conn, "signup.html", layout: {PxWeb.LayoutView, "index.html"}, csrf: get_csrf_token())
   end
 
-  def login(conn, _params) do
-    render(conn, "login.html", layout: {PxWeb.LayoutView, "index.html"})
+  def post_signup(conn, params) do
+    IO.puts "----- PARAMS -----"
+    IO.inspect params
+    IO.puts "----- CONN -----"
+    IO.inspect conn
+    redirect(conn, to: "/login")
+  end
+
+  def get_login(conn, _params) do
+    render(conn, "login.html", layout: {PxWeb.LayoutView, "index.html"}, csrf: get_csrf_token())
+  end
+
+  def post_login(conn, params) do
+    IO.puts "----- PARAMS -----"
+    IO.inspect params
+    IO.puts "----- CONN -----"
+    IO.inspect conn
+    redirect(conn, to: "/app")
   end
 end

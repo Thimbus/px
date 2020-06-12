@@ -12,19 +12,19 @@ chatInput.addEventListener("keypress", keypressHandler);
 
 channel.on("new_msg", newMsgHandler);
 channel.join()
-  .receive("ok", () => { console.log("Joined successfully!", `id: ${id}`); })
+  .receive("ok", () => { console.log("Joined successfully!"); })
   .receive("error", () => { console.log("Unable to join"); });
 
 function keypressHandler(e) {
   if (e.keyCode === 13) {
-    channel.push("new_msg", { message: chatInput.value, id });
+    channel.push("new_msg", { message: chatInput.value, username });
     chatInput.value = "";
   }
 }
 
 function newMsgHandler(payload) {
   let messageItem = document.createElement("li");
-  messageItem.innerText = `[User#${payload.id}] ${payload.message}`;
+  messageItem.innerText = `[${payload.username}] ${payload.message}`;
   messageContainer.appendChild(messageItem);
 }
 

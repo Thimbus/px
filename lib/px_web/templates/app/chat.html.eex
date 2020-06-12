@@ -1,4 +1,6 @@
-<ul id="messages"></ul>
-<input id="chat-input" type="text"></input>
+<div id="chat">
+    <ul id="messages"></ul>
+    <input id="chat-input" type="text" placeholder="Press Enter to send message"></input>
+</div>
 
 <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
