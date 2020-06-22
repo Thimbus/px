@@ -1,3 +1,29 @@
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    #chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        height: 100vh;
+    }
+
+    #messages {
+        list-style: none;
+    }
+
+    #chat-input {
+        padding: 2px;
+        margin-bottom: 5vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+</style>
+
 <div id="chat">
     <ul id="messages"></ul>
     <input id="chat-input" type="text" placeholder="Press Enter to send message"></input>

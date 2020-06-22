@@ -9,6 +9,4 @@ import css from "../css/app.css"
 //
 // Import dependencies
 //
-
-window.username = prompt("Username:");
 import socket from "./socket";

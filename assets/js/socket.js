@@ -1,5 +1,6 @@
 import { Socket } from "phoenix";
 
+let username = prompt("Username:");
 let socket = new Socket("/socket", {params: {token: window.userToken}});
 
 socket.connect();
