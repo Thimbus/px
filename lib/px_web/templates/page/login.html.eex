@@ -124,9 +124,9 @@
 			<h2>👋 Sign in to Dynne</h2>
 		</div>
 		<div id="formdata">
-			<input placeholder="Username">
-			<input type="password" placeholder="Password">
-            <input type="hidden" name="_csrf_token" value="<%= @csrf %>">
+			<input name="username" placeholder="Username">
+			<input name="password" placeholder="Password" type="password">
+            <input name="_csrf_token" type="hidden" value="<%= @csrf %>">
 			<button type="submit" class="border-primary">Sign in</button>
 		</div>
 		<h5>Don't have an account? <a href="/signup">Sign up!</a></h5>

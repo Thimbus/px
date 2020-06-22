@@ -124,10 +124,10 @@
 			<h2>📝 Sign up to Dynne</h2>
 		</div>
 		<div id="formdata">
-			<input placeholder="Username">
-			<input type="password" placeholder="Password">
-			<input type="email" placeholder="Email">
-            <input type="hidden" name="_csrf_token" value="<%= Plug.CSRFProtection.get_csrf_token() %>">
+			<input name="username" placeholder="Username">
+			<input name="password" placeholder="Password" type="password">
+			<input name="email" placeholder="Email" type="email">
+            <input name="_csrf_token" type="hidden" value="<%= @csrf %>">
 			<button type="submit" class="border-primary">Sign up</button>
 		</div>
 		<h5>Already have an account? <a href="/login">Sign in!</a></h5>
