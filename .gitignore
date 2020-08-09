@@ -35,3 +35,6 @@ npm-debug.log
 
 # ide-specific stuff
 .elixir_ls
+
+# this one is taken from create-react-app's build
+lib/px_web/templates/layout/index.html.eex
