@@ -7,11 +7,6 @@
 		--font-color: #333;
 	}
 
-	.dark-mode {
-		--bg-color: #333;
-		--font-color: #eee;
-	}
-
 	body {
 		margin: 0;
 		font-family: Roboto, sans-serif;

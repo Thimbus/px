@@ -16,7 +16,7 @@ defmodule PxWeb.PageController do
   end
 
   def get_login(conn, _params) do
-    render(conn, "login.html", csrf: get_csrf_token(), title: "Px | Log in!")
+    render(conn, "signin.html", csrf: get_csrf_token(), title: "Px | Log in!")
   end
 
   def post_login(conn, _params) do
