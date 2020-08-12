@@ -28,7 +28,7 @@ defmodule PxWeb.Router do
   scope "/app", PxWeb do
     pipe_through :browser
 
-    get "/", AppController, :index
+    get "/", ClientController, :index
   end
 
   # Other scopes may use custom stacks.
