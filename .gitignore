@@ -37,4 +37,4 @@ npm-debug.log
 .elixir_ls
 
 # this one is taken from create-react-app's build
-lib/px_web/templates/layout/index.html.eex
+lib/px_web/templates/page/client.html.eex
