@@ -13,7 +13,7 @@ defmodule PxWeb.Endpoint do
     at: "/",
     from: :px,
     gzip: false,
-    only: ~w(css media js favicon.ico robots.txt logo192.png logo512.png service-worker.js)
+    only: ~w(static favicon.ico robots.txt logo192.png logo512.png)
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
